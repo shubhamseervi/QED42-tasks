@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .title{
+            font-size:48px;
+            vertical-align:middle;
+            font-family:sans-serif;
+            color: #0e0e0e0;
+            font-weight: 200;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+
+
+<h1 class="title">Check console!</h1>
+
+
+<script>
+    for(var tri = "#" ; tri.length < 7; tri += "#"){
+        console.log(tri);
+    }
+
+//    second pro
+
+    var top = 100;
+
+    for( var i = 1; i <= 100; i++)
+    {
+        if( i%3 == 0 && i%5 ==0)
+        {
+            console.log("fizzbuzz");
+        }
+        else if (i%3 == 0)
+        {
+            console.log("Fuzz");
+        }
+        else if(i%5 == 0)
+        {
+            console.log("Buzz");
+        }
+        else
+        {
+            console.log(i);
+        }
+    }
+
+
+//    third pro
+
+    var size = 8;
+    var switchLine = 1;
+
+    for(var i = 1; i <= size; i++)
+    {
+        var output = "";
+
+
+        for(var j = 1; j <= size; j++)
+        {
+            if(switchLine == 0)
+            {
+                switchLine = 1;
+                output+= " ";
+            }
+            else
+            {
+                output+="#";
+                switchLine = 0;
+            }
+        }
+
+        console.log(output)
+
+        if(i%2 ==0 )
+        {
+            switchLine = 1;
+        } else {switchLine = 0;}
+
+    }
+
+</script>
+</body>
+</html>

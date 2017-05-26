@@ -1,0 +1,94 @@
+<html>
+<head>
+    <title>Functions</title>
+    <style>
+        .title{
+            font-size:48px;
+            vertical-align:middle;
+            font-family:sans-serif;
+            color: #0e0e0e0;
+            font-weight: 200;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+
+
+<h1 class="title">Functions and scope </br> Check console!</h1>
+
+
+<script>
+
+    var makeNoise = function(){
+        console.log("ping!");
+    }
+
+
+    makeNoise();
+
+
+    var power = function (base, exponent) {
+        var result = 1;
+        for(var count = 0; count < exponent; count++)
+            result *= base;
+            return result;
+    };
+
+    console.log(power(2, 10));
+
+
+
+
+//    Nested scope : function inside function.
+    // function flat and mountain can se result variable but cant see each other count variable.
+    var landscape = function(){
+
+
+        var result = " ";
+
+        var flat = function(size){
+            for(var count= 0; count < size; count ++ )
+                result += "_";
+        };
+
+
+        var mountain  = function (size) {
+
+            result += "/";
+
+            for(var count = 0; count < size; count ++ )
+                result += "'";
+            result += "\\";
+        };
+
+
+
+
+        flat(4);
+        mountain(6);
+        flat(4);
+
+
+        return result;
+
+    };
+
+
+    console.log(landscape());
+
+
+    // calls save on top of stack but due to infinite calls to
+//
+//    function chicken() {
+//        return egg();
+//    }
+//    function egg() {
+//        return chicken();
+//    }
+//    console.log(chicken() + " came first.");
+
+    // error : Maximum call stack size exceeded.
+</script>
+</body>
+</html>
