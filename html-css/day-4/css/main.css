@@ -1,0 +1,344 @@
+
+
+
+html, body{
+    padding:0;
+    margin: 0;
+}
+
+
+
+body {
+    background: #fff;
+    font-family: 'Libre Baskerville', sans-serif;
+}
+
+
+
+
+header {
+    height: 230px;
+    padding: 20px 0 70px 0;
+    color: #2d6360;
+    text-align: center;
+}
+
+
+
+.page-wrapper{
+    position: relative;
+}
+
+
+
+
+h1, h2 {
+    padding: 0 10%;
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+}
+h1 {
+    padding-top: 0;
+    padding-bottom: 5px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+
+h2 {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    border-top: none;
+    color: #2e484c;
+    font-size: 18px;
+    font-style: italic;
+}
+
+
+
+.summary, .preamble {
+    width: 70%;
+    margin: 0 auto;
+}
+
+
+
+
+
+ul {
+  list-style-type: none;
+}
+
+.main{
+  margin: 150px;
+  margin-top: 20px;
+  width: 70%;
+}
+/*
+#zen-supporting{
+  margin-left: 120px;
+  margin-top: 20px;
+  width: 70%;
+}*/
+
+/*.page-wrapper{*/
+  /*padding: 15px 30px 0 0;*/
+  /*display: block;*/
+/*}*/
+
+
+
+.section {
+    clear: both;
+    padding: 0px;
+    margin-left: 10%;
+}
+
+
+.col {
+    display: block;
+    float:left;
+    margin: 0 0 0 0%;
+}
+
+
+.col:first-child { margin-left: 0; }
+
+
+.group:before,
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1;
+}
+
+
+.content {
+    width: 66.1%;
+}
+.sidebar {
+    width: 32.2%;
+}
+
+
+
+
+@media only screen and (max-width: 480px) {
+    .col { margin: 1% 0 1% 0%;}
+    .content, .sidebar { width: 100%; }
+}
+
+
+.sidebar-wrapper {
+	float: left;
+	padding: 0 0 0 0px;
+  display: block;
+
+
+  /*width: 24%;
+  display: block;
+  float: right;
+  margin-top: 300px;
+  margin-right: 15px;
+    */
+}
+
+
+
+
+.content-wapper {
+  margin-left: 120px;
+	max-width: 800px;
+  display: block;
+  float: left;
+}
+
+.intro {
+  height: 199px;
+  background-color: #83B271;
+  margin: 70px 0 70px 60px;
+}
+
+
+.intro h1 {
+  font-size: 32px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  margin: 10px 0px 10px 0px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.intro h2 {
+  font-size: 18px;
+  color: #fff;
+  font-style: italic;
+  line-height: 1.7em;
+  font-family: 'Lato', sans-serif;
+}
+
+.intro > header {
+  position: absolute;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+.summary {
+  font-size: 16px;
+  font-family: "Times New Roman", Georgia, Serif ;
+}
+
+/*doubt : do i need do write h3 everytime i use a comma seprate*/
+.preamble h3,
+.explanation h3,
+.participation h3,
+.benefits h3,
+.requirements h3 {
+  font-size: 28px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.preamble,
+.explanation,
+.participation p{
+  font-size: 16px;
+  font-family: 'times new roman', sans-serif;
+  font-weight: 400;
+  text-align: justify;
+}
+
+ .design-selection, .design-archives {
+   text-align: center;
+   background-color: #E7F0D2;
+   text-align: center;
+ }
+
+ .design-selection > nav > ul {
+   padding: 30px;
+   margin-top: 0px;
+   margin-bottom: 0px;
+ }
+
+ .design-selection > nav > ul > li > .seprator{
+   padding: 10px 0px 10px 0px;
+ }
+
+.design-archives > nav > ul{
+  padding: 20px;
+}
+
+.zen-resources > ul {
+  padding : 20px;
+}
+
+.resources, .archives{
+  color: #83b271;
+}
+
+.links > a{
+  color:inherit;
+}
+
+a.design-name {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #83B271;
+  font-family: 'Lato', sans-serif;
+}
+
+a.designer-name::before {
+  content: 'by';
+  display: inline-block;
+  font-style: italic;
+  margin-right: 4px;
+}
+
+a.designer-name:nth-child(2n){
+  display: block;
+  font-style: italic;
+  color: grey;
+  margin-bottom: 10px;
+}
+
+
+
+.links {
+  width: 200px;
+  padding: 10px 0 10px 0;
+  border-bottom: 1px solid #83B271;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  margin-bottom: 10px;
+}
+
+.links:first-child{
+  border-top: 1px solid #83B271;
+}
+
+.contentinfo {
+  font-size: 32px;
+  font-family: 'Pacifico', cursive;
+}
+
+.qoute-bg{
+  padding: 40px;
+  text-align: center;
+}
+
+
+/*#zen-participation{*/
+  /*background-color: #709676;*/
+/*}*/
+
+/*#zen-intro{
+
+
+}*/
+
+
+.sidebar-button{
+  background-color:#ABCB89;
+  height: 199px;
+  margin-top: 70px;
+}
+
+.sidebar-button > .button{
+  line-height: 200px;
+  text-align: center;
+}
+
+.sidebar-button > .button > a{
+  padding: 16px;
+  color: #fff;
+  background: #83B271;
+  opacity: 0.8;
+  filter: alpha(opacity=30); /* For IE8 and earlier */
+  text-transform: uppercase;
+  font-size: 15px;
+  font-family: 'Lato', sans-serif;
+}
+.greenbg{
+ background-color: green;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+
+.page-wrapper{
+    margin: 0 1.5%;
+}
+
+
+.group:before,
+.group:after {
+    content: "";
+    display: table;
+}
+.group:after {
+    clear: both;
+}
+.group {
+    clear: both;
+    *zoom: 1;
+}
+
+section{
+    margin: 0 1.5%;
+    float: left;
+    width:65%;
+}
+
+aside{
+    float: right;
+    margin:0 1.5%;
+    width:30%;
+}
+
+
+footer{
+    clear: both;
+}

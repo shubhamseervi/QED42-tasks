@@ -1,0 +1,50 @@
+.wrapper{
+    border:1px solid #FF5200;
+    padding:10px;
+}
+
+.orange-box {
+    margin: 0;
+    background-color: #FF5200;
+    color: #fff;
+    width: 20%;
+}
+
+.blue-box {
+    margin: 0;
+    background-color: #04536C;
+    width:20%;
+}
+
+.dashed-box{
+  width: 40%;
+  border: 4px dashed #7A57D1;
+}
+
+p {
+    width: 50%;
+}
+
+.float-left{
+  float: left;
+}
+
+.float-right{
+  float: right;
+}
+
+.clear-left{
+  clear: left;
+}
+
+.clear-right{
+  clear: right;
+}
+
+.clear-both{
+  clear: both;
+}
+
+.transparent{
+  opacity: 0.6;
+}

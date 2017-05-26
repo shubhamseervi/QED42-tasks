@@ -1,0 +1,11 @@
+.rss {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.rss li {
+  background: #fff url(../img/rss.png) 0 3px no-repeat;
+  padding: 3px 0 20px 45px;
+  margin-left: 2em;
+}

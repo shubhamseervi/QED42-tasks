@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact form</title>
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+<div class="page-wrapper">
+    <h3>Please fill the form!</h3>
+    <form id="contact-form" action="script.php" method="post">
+        <input type="hidden" name="redirect" value="http://www.opera.com" />
+        <ul>
+            <li>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" value="" />
+            </li>
+            <li>
+                <label for="email">Email:</label>
+                <input type="text" name="email" id="email" value="" />
+            </li>
+            <li>
+                <label for="comments">Comments:</label>
+                <textarea name="comments" id="comments" cols="25" rows="3"></textarea>
+            </li>
+                <input type="checkbox" name="Subscriber_list" value="true">Subscribe to mailing list!
+            </li>
+            <li>
+                <input type="submit" value="submit" />
+                <input type="reset" value="reset" />
+            </li>
+
+        </ul>
+    </form>
+
+
+</div>
+
+</body>
+</html>

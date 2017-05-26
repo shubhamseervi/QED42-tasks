@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Example of css clear</title>
+    <link rel="stylesheet" href="css/css-clear.css">
+  </head>
+  <body>
+    <h1>Using css clear property.</h1>
+    <h6>both boxes set to float left</h6>
+    <div class="wrapper">
+
+      <p class="orange-box float-left ">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+      <p class="blue-box float-left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+      <p class="dashed-box clear-left">This paragraph clears left.</p>
+
+    </div>
+
+    <h1>no clear on 3rd box</h1>
+    <h6>3rd box place itself according to parent wrapper</h6>
+
+    <div class="wrapper">
+      <p class="orange-box float-left transparent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+      <p class="blue-box float-left transparent">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+      <p class="dashed-box no-clear-left">This paragraph clears left.</p>
+    </div>
+
+    <h1>Using float left on class "left"</h1>
+    <div class="wrapper">
+      <p class="orange-box float-left">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+      <p class="blue-box float-right">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+      <p class="dashed-box float-left clear-both">This paragraph clears left.</p>
+
+    </div>
+
+  </br>
+
+  </br>
+
+  </br>
+
+
+  </br>
+  </body>
+</html>

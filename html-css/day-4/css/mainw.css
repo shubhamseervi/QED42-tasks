@@ -1,0 +1,357 @@
+
+@import url(http://fonts.googleapis.com/css?family=Julius+Sans+One|Libre+Baskerville:400,400italic);
+
+
+body{
+    color:#1a5952;
+    background:#fff;
+    font-family: 'Libre Baskerville', sans-serif;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #D9a077;
+}
+
+a:hover, a:visited{
+    color: black;
+    background-color: #fff;
+}
+
+
+page-wrapper{
+    position: relative;
+}
+
+header{
+    height: 230px;
+    padding:20px 0 70px 0;
+    background-color: #205D67;
+    text-align: left;
+    color: #fff;
+}
+
+
+h1, h2 {
+    padding: 0 10%;
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+}
+h1 {
+    padding-top: 0;
+    padding-bottom: 5px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 3.2em;
+    text-transform: uppercase;
+}
+
+
+h2 {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    border-top: none;
+    color: rgba(255,255,255,0.6);
+    font-size: 1.6em;
+    font-style: italic;
+}
+
+
+h3 {
+    margin: 30px 0 0 0;
+    color: #2e484c;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+p {
+    margin: 12px 0;
+    line-height: 2;
+}
+
+
+.summary, .preamble{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.summary{
+    padding: 20px;
+}
+
+
+
+.supporting h3, .supporting p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+div.participation, div.benefits{
+    background-color: #D8EBB5;
+    padding: 0px;
+    margin-top: 0;
+
+}
+
+div.participation {
+    padding: 80px 0;
+    margin-top: 3em;
+}
+
+div.benefits {
+    padding-bottom: 3em;
+    margin-bottom: 3em;
+}
+div.participation h3, div.benefits h3 {
+    margin-top: 0;
+}
+div.participation p, div.benefits p {
+    margin-bottom: 0;
+}
+
+
+.sidebar{
+    background-color: #D8EBB5;
+}
+
+.sidebar a {
+    color: #639A67;
+    text-decoration: none;
+}
+.sidebar a:hover, .sidebar a:focus {
+    color: #49968e;
+}
+
+.sidebar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+
+.design-selection li, .zen-resources li{
+    border-top:1px #639A67 solid;
+    height:50px;
+    float: left;
+    color: #D9BF77;
+    font-style: italic;
+    padding: 20px;
+    display: block;
+}
+
+.design-selection h3{
+    display: none;
+}
+
+.design-selection li:nth-child(odd), .zen-resources li:nth-child(odd),
+.design-selection li:nth-child(even), .zen-resources li:nth-child(even){
+    clear: left;
+}
+
+.design-selection .designer-name {
+    color: #616857;
+    font-size: 0.9em;
+    font-style: normal;
+}
+
+
+a.designer-name::before {
+    content:"by";
+    display: inline-block;
+    font-style: italic;
+    margin-right: 4px;
+}
+
+a.designer-name:nth-child(2n){
+    display: block;
+    font-style: italic;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+
+.design-archives{
+    position:absolute;
+    top: 0px;
+    right:0px;
+    background-color: #233142;
+    height: 320px;
+    width:25%;
+}
+
+
+h3.archives, h3.resources{
+    display: none;
+}
+
+.design-archives li.viewall{
+    padding:0 70px;
+    line-height: 50px;
+    position: absolute;
+    top: 45%;
+
+}
+
+.design-archives .viewall a {
+    z-index: 2;
+    width: 100%;
+    min-height: 70px;
+    text-align: center;
+    padding: 16px;
+    color: #fff;
+    background: #83B271;
+    opacity: 0.8;
+    filter: alpha(opacity=30); /* For IE8 and earlier */
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+
+
+
+
+
+.zen-resources{
+    background-color: #66C6BA;
+}
+
+.zen-resources li {
+    border-top: solid 1px red;
+}
+
+
+
+.zen-resources li:last-child, .design-selection li:last-child{
+    border-bottom: 1px #639A67 solid;
+
+}
+
+
+.requirements p:nth-child(5) {
+    padding-bottom: 2em;
+}
+
+.supporting .requirements {
+    float: none;
+    clear: both;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.supporting .requirements a {
+    text-decoration: none;
+}
+.supporting .requirements a:hover, .supporting .requirements a:focus {
+    text-decoration: underline;
+}
+.supporting .requirements h3 {
+    padding-top: 0;
+}
+.requirements p:last-child {
+    width: auto;
+    padding: 1em 12%;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.4);
+    background: #3e5d67;
+
+    background-attachment: fixed, fixed, fixed, scroll;
+    background-image: url(contours.png), url(gridlines.png), url(noise.png), url(koi.jpg);
+    background-position: 0 0, -5px -25px, 0 0, 0 50%;
+    background-repeat: repeat, repeat, repeat, no-repeat;
+    background-size: auto, auto, auto, cover;
+
+    font-size: 2em;
+    font-style: italic;
+    text-align: center;
+}
+.requirements p:last-child a {
+    color: rgba(255, 255, 255, 0.7);
+    font-style: normal;
+}
+
+
+
+
+
+
+
+
+/*@media only screen and (min-width: 1132px){*/
+
+    /*header{*/
+        /*width:100%;*/
+        /*height:310px;*/
+        /*padding:0 10%;*/
+        /*vertical-align: middle;*/
+        /*text-align: left;*/
+    /*}*/
+
+    /*.summary, .preamble, .supporting div, .requirements h3, .requrements p{*/
+
+        /*float: left;*/
+        /*clear: left;*/
+        /*width:66%;*/
+        /*padding: 1em 5% 1em 10%;*/
+    /*}*/
+
+    /*.explanation h3, .explanation p,*/
+    /*.participation h3,.participation p,*/
+    /*.benefits h3, .benefits p {*/
+        /*width:100%;*/
+    /*}*/
+
+    /*.summary {*/
+        /*padding-top: 3.25em;*/
+    /*}*/
+
+    /*.requirements h3,  .requirements p{*/
+        /*margin: 0;*/
+        /*padding-bottom: 0;*/
+    /*}*/
+
+
+    /*div.participation, div.benefits{*/
+        /*width:100%;*/
+        /*padding-left: 10%;*/
+        /*padding-bottom: 38%;*/
+    /*}*/
+
+    /*.design-selection, .zen-resources {*/
+        /*position: absolute;*/
+        /*top:360px;*/
+        /*right:0;*/
+        /*width: 33.3%;*/
+        /*padding:0 0 20px 0;*/
+    /*}*/
+
+
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

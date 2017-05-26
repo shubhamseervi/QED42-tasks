@@ -1,0 +1,29 @@
+#chess{
+    /*width:416px;*/
+    /*hight:416px;*/
+}
+
+#chess div{
+    width:50px;
+    height:50px;
+    background-color:white;
+    float:left;
+    border:1px solid black;
+}
+
+/*#chess div:nth-child(16n+1), #chess div:nth-child(16n+3),*/
+/*#chess div:nth-child(16n+5), #chess div:nth-child(16n+7),*/
+/*#chess div:nth-child(16n+10), #chess div:nth-child(16n+12),*/
+/*#chess div:nth-child(16n+16), #chess div:nth-child(16n+14) {*/
+    /*background-color: black;*/
+/*}*/
+
+#chess div:nth-child(8n+1){
+    clear:left;
+}
+
+
+
+#chess div:nth-child(2n - 1) {
+    background-color: black;
+}w
