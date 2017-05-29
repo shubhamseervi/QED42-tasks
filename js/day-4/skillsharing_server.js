@@ -8,42 +8,40 @@
 // server.listen(8000);
 
 
-var http      = require("http");
-var Router    = require("./router");
-var ecstatic  = require("ecstatic");
-
+var http = require("http");
+var Router = require("./router");
+var ecstatic = require("ecstatic");
 var fileServer = ecstatic({root: "./public"});
-var router new Router();
+var router = new Router();
 
-http.createServer(function(request, response){
-  if(!router.resolve(request, response))
+http.createServer(function(request, response) {
+  if (!router.resolve(request, response))
     fileServer(request, response);
-}).listen(8000);
+}).listen(8000, function(){
+  console.log('Listening at Port 8000');
+});
 
-function respond(response, status. data, type) {
+function respond(response, status, data, type) {
   response.writeHead(status, {
     "Content-Type": type || "text/plain"
   });
+  response.end(data);
 }
 
 function respondJSON(response, status, data) {
-  respond(response, status, JSON.stringify(data), "application/json");
+  respond(response, status, JSON.stringify(data),
+          "application/json");
 }
 
 var talks = Object.create(null);
 
-
-// GET request
-
 router.add("GET", /^\/talks\/([^\/]+)$/,
-        function(request, response, title){
-          if(title in talks){
-            respondJSON(response, 200, talks[title]);
-          else
-          respond(response, 404, "No talk '" + title + "' found");
-        });
-
-//delete Content
+           function(request, response, title) {
+  if (title in talks)
+    respondJSON(response, 200, talks[title]);
+  else
+    respond(response, 404, "No talk '" + title + "' found");
+});
 
 router.add("DELETE", /^\/talks\/([^\/]+)$/,
            function(request, response, title) {
@@ -70,7 +68,6 @@ function readStreamAsJSON(stream, callback) {
   });
 }
 
-
 router.add("PUT", /^\/talks\/([^\/]+)$/,
            function(request, response, title) {
   readStreamAsJSON(request, function(error, talk) {
@@ -91,7 +88,6 @@ router.add("PUT", /^\/talks\/([^\/]+)$/,
   });
 });
 
-
 router.add("POST", /^\/talks\/([^\/]+)\/comments$/,
            function(request, response, title) {
   readStreamAsJSON(request, function(error, comment) {
@@ -111,14 +107,12 @@ router.add("POST", /^\/talks\/([^\/]+)\/comments$/,
   });
 });
 
-
 function sendTalks(talks, response) {
   respondJSON(response, 200, {
     serverTime: Date.now(),
     talks: talks
   });
 }
-
 
 router.add("GET", /^\/talks$/, function(request, response) {
   var query = require("url").parse(request.url, true).query;
@@ -141,7 +135,6 @@ router.add("GET", /^\/talks$/, function(request, response) {
   }
 });
 
-
 var waiting = [];
 
 function waitForChanges(since, response) {
@@ -156,7 +149,6 @@ function waitForChanges(since, response) {
   }, 90 * 1000);
 }
 
-
 var changes = [];
 
 function registerChange(title) {
@@ -166,7 +158,6 @@ function registerChange(title) {
   });
   waiting = [];
 }
-
 
 function getChangedTalks(since) {
   var found = [];

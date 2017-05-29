@@ -1,7 +1,5 @@
-var Router = module.export = function(){
-
+var Router = module.exports = function(){
   this.routes = [];
-
 };
 
 Router.prototype.add = function(method, url, handler){
