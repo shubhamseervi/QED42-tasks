@@ -1,13 +1,3 @@
-// var http = require("http");
-// var server = http.createServer(function(request, response) {
-//     response.writeHead(200, {"Content-Type": "text/html"});
-//     response.write("<h1>Hello!</h1><p>You asked for <code>" +
-//         request.url + "</code></p>");
-//     response.end();
-// });
-// server.listen(8000);
-
-
 var http = require("http");
 var Router = require("./router");
 var ecstatic = require("ecstatic");
@@ -83,13 +73,14 @@ router.add("PUT", /^\/talks\/([^\/]+)$/,
                       summary: talk.summary,
                       comments: []};
       registerChange(title);
-      respond(response, 204, null);
+      respond(response, 200, null);
     }
   });
 });
 
 router.add("POST", /^\/talks\/([^\/]+)\/comments$/,
            function(request, response, title) {
+
   readStreamAsJSON(request, function(error, comment) {
     if (error) {
       respond(response, 400, error.toString());
@@ -100,7 +91,7 @@ router.add("POST", /^\/talks\/([^\/]+)\/comments$/,
     } else if (title in talks) {
       talks[title].comments.push(comment);
       registerChange(title);
-      respond(response, 204, null);
+      respond(response, 200, null);
     } else {
       respond(response, 404, "No talk '" + title + "' found");
     }
@@ -177,3 +168,15 @@ function getChangedTalks(since) {
   }
   return found;
 }
+
+
+
+
+// var http = require("http");
+// var server = http.createServer(function(request, response) {
+//     response.writeHead(200, {"Content-Type": "text/html"});
+//     response.write("<h1>Hello!</h1><p>You asked for <code>" +
+//         request.url + "</code></p>");
+//     response.end();
+// });
+// server.listen(8000);
